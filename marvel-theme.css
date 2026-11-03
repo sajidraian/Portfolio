@@ -676,3 +676,148 @@ html[data-theme="light"] .skills-note {
   .trait,.skill-card,.chips span { transition:none!important; }
   .trait:hover,.skill-card:hover { transform:none!important; }
 }
+
+
+
+/* =========================================================
+   EDUCATION + EXPERIENCE — cinematic career timeline
+   ========================================================= */
+#education {
+  overflow:hidden;
+  background:
+    radial-gradient(ellipse at 8% 52%,rgba(228,61,67,.055),transparent 34%),
+    radial-gradient(ellipse at 92% 18%,rgba(91,220,244,.075),transparent 32%),
+    transparent!important;
+}
+#education > .container > .section-heading {
+  position:relative;
+  padding-left:22px;
+  border-left:2px solid var(--m-red);
+}
+#education .timeline-grid {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:clamp(22px,4vw,54px);
+  margin-top:48px;
+}
+#education .timeline-grid > div {
+  position:relative;
+  min-width:0;
+}
+#education .column-title {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin:0 0 20px;
+  padding-bottom:15px;
+  border-bottom:1px solid rgba(151,181,205,.16);
+  font-size:17px;
+  letter-spacing:.015em;
+}
+#education .column-title span {
+  display:grid;
+  place-items:center;
+  width:38px;height:38px;
+  color:var(--m-cyan);
+  background:rgba(91,220,244,.08);
+  border:1px solid rgba(91,220,244,.22);
+  border-radius:9px;
+  box-shadow:0 0 20px rgba(91,220,244,.06);
+}
+#education .timeline-card {
+  position:relative;
+  min-height:280px;
+  margin-left:18px;
+  padding:30px 28px 26px 34px!important;
+  overflow:visible;
+  border-radius:11px!important;
+  background:
+    radial-gradient(circle at 100% 0%,rgba(91,220,244,.075),transparent 34%),
+    linear-gradient(145deg,rgba(18,32,47,.98),rgba(9,17,27,.98))!important;
+  border:1px solid rgba(151,181,205,.17)!important;
+  box-shadow:0 20px 48px rgba(0,0,0,.2),inset 0 1px rgba(255,255,255,.025)!important;
+  transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease;
+}
+#education .timeline-card:before {
+  content:"";
+  position:absolute;
+  left:-19px;top:0;bottom:0;
+  width:1px;
+  background:linear-gradient(to bottom,rgba(91,220,244,.55),rgba(151,181,205,.12) 75%,transparent);
+}
+#education .timeline-card:hover {
+  transform:translateY(-5px);
+  border-color:rgba(91,220,244,.38)!important;
+  box-shadow:0 26px 58px rgba(0,0,0,.28),0 0 25px rgba(91,220,244,.055)!important;
+}
+#education .timeline-dot {
+  position:absolute;
+  left:-24px;top:30px;
+  width:11px;height:11px;
+  border:2px solid #0b1420;
+  border-radius:50%;
+  background:var(--m-cyan)!important;
+  box-shadow:0 0 0 4px rgba(91,220,244,.10),0 0 16px rgba(91,220,244,.6)!important;
+}
+#education .timeline-date {
+  display:inline-flex;
+  align-items:center;
+  min-height:27px;
+  margin-bottom:18px;
+  padding:6px 10px;
+  color:var(--m-gold)!important;
+  background:rgba(231,184,92,.075);
+  border:1px solid rgba(231,184,92,.2);
+  border-radius:5px;
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:.16em!important;
+}
+#education .timeline-card h3 {
+  margin:0 0 10px;
+  font-size:clamp(18px,2vw,22px);
+  line-height:1.4;
+  letter-spacing:-.025em;
+}
+#education .timeline-card p {
+  line-height:1.8;
+  font-size:13px;
+}
+#education .timeline-card .timeline-place {
+  margin-bottom:14px;
+  color:#8dddeb!important;
+  font-weight:600;
+}
+#education .timeline-card .tag {
+  display:inline-flex;
+  margin-top:12px;
+  padding:7px 10px!important;
+  font-size:10px!important;
+  line-height:1.4;
+}
+html[data-theme="light"] #education {
+  background:radial-gradient(ellipse at 92% 18%,rgba(35,157,184,.055),transparent 32%),#edf2f6!important;
+}
+html[data-theme="light"] #education .column-title { color:#253b4c!important;border-color:#dce5eb; }
+html[data-theme="light"] #education .timeline-card {
+  background:radial-gradient(circle at 100% 0%,rgba(35,157,184,.045),transparent 34%),linear-gradient(145deg,#fff,#f4f8fa)!important;
+  border-color:#d9e4e9!important;
+  box-shadow:0 16px 38px rgba(24,45,62,.07)!important;
+}
+html[data-theme="light"] #education .timeline-card:before { background:linear-gradient(to bottom,rgba(35,157,184,.55),rgba(151,181,205,.15) 75%,transparent); }
+html[data-theme="light"] #education .timeline-dot { border-color:#fff; }
+html[data-theme="light"] #education .timeline-card h3 { color:#172534!important; }
+html[data-theme="light"] #education .timeline-card .timeline-place { color:#247c91!important; }
+html[data-theme="light"] #education .timeline-date { color:#8b641d!important;background:#fbf5e8;border-color:#eee0bd; }
+@media(max-width:760px) {
+  #education > .container > .section-heading { padding-left:16px; }
+  #education .timeline-grid { grid-template-columns:1fr;gap:30px;margin-top:32px; }
+  #education .timeline-card { min-height:0;padding:24px 20px 22px 27px!important;margin-left:15px; }
+  #education .timeline-card:before { left:-16px; }
+  #education .timeline-dot { left:-21px;top:26px; }
+  #education .column-title { margin-bottom:16px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  #education .timeline-card { transition:none!important; }
+  #education .timeline-card:hover { transform:none!important; }
+}
