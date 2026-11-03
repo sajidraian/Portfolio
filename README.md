@@ -25,3 +25,12 @@ A responsive personal portfolio built with HTML, CSS, and JavaScript in a clean 
 ## Personal links
 - GitHub: https://github.com/sajidraian
 - LinkedIn: https://www.linkedin.com/in/sajid-al-raian/
+
+
+## Featured projects
+
+- **StudioSpace** — Peer-to-peer creative workspace and production studio booking platform. [Live website](https://studiospace-client-one.vercel.app/) · [Client repository](https://github.com/sajidraian/studiospace-client) · [Server repository](https://github.com/sajidraian/studiospace-server)
+- **BazarDor** — Digital marketplace web application. [Live website](https://bazardor26.vercel.app/) · [GitHub](https://github.com/sajidraian/BazarDor)
+- **FitLog** — Fitness-focused web application. [Live website](https://fitlog26.netlify.app/) · [GitHub](https://github.com/sajidraian/fitlog-app)
+- **Dev Stack Builder** — Tool for exploring and organizing web development technology stacks. [Live website](https://building-devstack.netlify.app/) · [GitHub](https://github.com/sajidraian/dev-stack-builder-a_05)
+
