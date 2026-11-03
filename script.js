@@ -23,9 +23,9 @@ if (form) {
       "Portfolio contact from " + d.get("name"),
     );
     const body = encodeURIComponent(
-      "Hi Sajid,\\n\\n" +
+      "Hi Sajid,\n\n" +
         d.get("message") +
-        "\\n\\nFrom: " +
+        "\n\nFrom: " +
         d.get("name") +
         " (" +
         d.get("email") +
