@@ -71,7 +71,31 @@ const projects = {
 
     future:
       "Potential improvements include technology stack presets, clearer technology explanations, export options, accessibility enhancements, and expanded documentation."
-  }
+  },
+
+  studiospace: {
+    title: "StudioSpace",
+    category: "Full-Stack Marketplace",
+    summary: "A peer-to-peer marketplace for discovering and booking creative workspaces.",
+    demo: "https://studiospace-client-one.vercel.app/",
+    repo: "https://github.com/sajidraian/studiospace-client",
+    image: "assets/studiospace-preview.svg",
+    imageAlt: "StudioSpace creative workspace booking platform preview",
+
+    tags: ["Next.js", "TypeScript", "MongoDB", "Express.js", "Full-Stack"],
+
+    description:
+      "StudioSpace is a peer-to-peer creative workspace and production studio sharing platform. It helps creators discover and book spaces such as photography studios, podcast rooms, music suites, and production spaces, while allowing studio owners to manage their listings and reservations. The application includes separate customer and owner workflows.",
+
+    stack:
+      "Frontend: Next.js, React, TypeScript, and Tailwind CSS. Backend: Node.js, Express.js, and TypeScript. Database: MongoDB. Authentication: Better Auth with JWT-based authentication using HTTPOnly cookies. Deployment: Vercel and Render. See the client and server repositories for implementation details.",
+
+    challenges:
+      "Key engineering areas included protecting private operations with HTTPOnly-cookie-based JWT authentication, maintaining authenticated sessions across private-route reloads, and preventing overlapping confirmed bookings. The application also includes booking status management and a system-wide light/dark theme.",
+
+    future:
+      "Potential next steps include expanding automated test coverage, improving booking availability tools, adding richer analytics for studio owners, and refining accessibility across the application."
+  },
 };
 
 const projectRoot = document.getElementById("projectDetail");
