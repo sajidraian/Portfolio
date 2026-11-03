@@ -1660,7 +1660,7 @@ html[data-theme="dark"] .footer {
   --muted: #667085;
   --line: #e7e9f2;
   --pale: #f7f7fc;
-  --shadow: 0 24px 70px rgba(35,  thirty, 90, .09);
+  --shadow: 0 24px 70px rgba(35, 30, 90, .09);
 }
 body {
   font-family: "DM Sans", sans-serif;
