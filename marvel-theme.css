@@ -821,3 +821,201 @@ html[data-theme="light"] #education .timeline-date { color:#8b641d!important;bac
   #education .timeline-card { transition:none!important; }
   #education .timeline-card:hover { transform:none!important; }
 }
+
+
+
+/* =========================================================
+   PROJECT SHOWCASE — cinematic mission files
+   ========================================================= */
+.projects-section {
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(ellipse at 4% 12%,rgba(228,61,67,.07),transparent 30%),
+    radial-gradient(ellipse at 96% 68%,rgba(91,220,244,.075),transparent 32%),
+    rgba(9,15,24,.82)!important;
+  border-top:1px solid rgba(151,181,205,.09);
+  border-bottom:1px solid rgba(151,181,205,.09);
+}
+.projects-heading {
+  align-items:flex-end;
+  margin-bottom:42px;
+}
+.projects-heading .section-heading {
+  position:relative;
+  padding-left:22px;
+  border-left:2px solid var(--m-red);
+}
+.projects-heading .section-heading h2 {
+  margin-top:12px;
+  letter-spacing:-.045em;
+}
+.projects-heading .section-heading p {
+  max-width:510px;
+  line-height:1.8;
+}
+.project-count {
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin:0 0 8px!important;
+  padding:10px 13px;
+  color:#a9bdcc!important;
+  background:rgba(91,220,244,.055);
+  border:1px solid rgba(91,220,244,.16);
+  border-radius:6px;
+  font-size:9px!important;
+  letter-spacing:.17em!important;
+}
+.project-count b { color:var(--m-cyan)!important; }
+.projects-grid {
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:24px!important;
+  align-items:stretch;
+}
+.project-card {
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+  border-radius:13px!important;
+  border-color:rgba(151,181,205,.16)!important;
+  background:linear-gradient(145deg,rgba(17,31,46,.98),rgba(8,15,24,.98))!important;
+}
+.project-preview {
+  position:relative;
+  flex:0 0 auto;
+  aspect-ratio:16/9;
+  border-radius:0!important;
+  border-bottom:1px solid rgba(91,220,244,.15);
+  background:
+    radial-gradient(circle at 50% 45%,rgba(91,220,244,.12),transparent 55%),
+    #08111c!important;
+}
+.project-preview:before {
+  content:"LIVE PROJECT / PREVIEW";
+  position:absolute;
+  z-index:1;
+  top:13px;left:14px;
+  padding:6px 9px;
+  color:#c5eaf0;
+  background:rgba(5,13,22,.76);
+  border:1px solid rgba(91,220,244,.22);
+  border-radius:4px;
+  font-size:8px;
+  font-weight:800;
+  letter-spacing:.15em;
+  backdrop-filter:blur(10px);
+}
+.project-preview:after {
+  background:linear-gradient(180deg,rgba(4,9,16,.03) 45%,rgba(4,9,16,.32))!important;
+}
+.project-preview img {
+  object-fit:cover;
+  object-position:top center;
+}
+.project-content {
+  display:flex;
+  flex:1;
+  flex-direction:column;
+  padding:25px 25px 23px!important;
+}
+.project-meta {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-size:9px!important;
+  letter-spacing:.16em!important;
+}
+.project-meta span:last-child {
+  display:grid;
+  place-items:center;
+  min-width:28px;height:25px;
+  padding:0 6px;
+  color:var(--m-cyan)!important;
+  background:rgba(91,220,244,.07);
+  border:1px solid rgba(91,220,244,.17);
+  border-radius:4px;
+}
+.project-content h3 {
+  margin:16px 0 9px!important;
+  font-size:clamp(21px,2.2vw,26px)!important;
+  letter-spacing:-.04em!important;
+}
+.project-content p {
+  flex:1;
+  min-height:58px!important;
+  margin-bottom:18px;
+  line-height:1.8!important;
+  font-size:13px!important;
+}
+.project-tags {
+  gap:8px!important;
+  margin:0 0 18px!important;
+}
+.project-tags span {
+  padding:6px 9px!important;
+  font-size:9px!important;
+  letter-spacing:.025em;
+}
+.project-buttons {
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:9px!important;
+  margin-top:auto!important;
+  padding-top:17px;
+  border-top:1px solid rgba(151,181,205,.12);
+}
+.project-buttons .btn {
+  min-height:38px;
+  padding:10px 13px!important;
+  font-size:9px!important;
+}
+.project-buttons .text-link {
+  width:100%;
+  margin-top:5px!important;
+  padding-top:8px;
+  font-size:11px;
+}
+html[data-theme="light"] .projects-section {
+  background:radial-gradient(ellipse at 96% 68%,rgba(35,157,184,.055),transparent 32%),#e8eef2!important;
+}
+html[data-theme="light"] .projects-heading .section-heading h2 { color:#172534!important; }
+html[data-theme="light"] .project-count {
+  color:#526b7b!important;background:#f4fafb;border-color:#d6e6eb;
+}
+html[data-theme="light"] .project-card {
+  background:linear-gradient(145deg,#fff,#f5f8fa)!important;
+  border-color:#d9e4e9!important;
+  box-shadow:0 14px 38px rgba(24,45,62,.07)!important;
+}
+html[data-theme="light"] .project-preview {
+  background:radial-gradient(circle at 50% 45%,rgba(35,157,184,.08),transparent 55%),#e3edf1!important;
+  border-color:#d5e4e9;
+}
+html[data-theme="light"] .project-preview:before {
+  color:#315466;background:rgba(255,255,255,.88);border-color:#cfe1e7;
+}
+html[data-theme="light"] .project-content h3 { color:#172534!important; }
+html[data-theme="light"] .project-content p { color:#5d6d7b!important; }
+html[data-theme="light"] .project-buttons { border-color:#e0e8ed; }
+html[data-theme="light"] .project-meta span:last-child { color:#247c91!important;background:#edf7f9;border-color:#d6e9ed; }
+@media(max-width:760px) {
+  .projects-heading { align-items:flex-start;flex-direction:column;gap:16px;margin-bottom:28px; }
+  .projects-heading .section-heading { padding-left:16px; }
+  .project-count { margin:0!important; }
+  .projects-grid { grid-template-columns:1fr!important;gap:18px!important; }
+  .project-content { padding:21px 19px 19px!important; }
+  .project-content p { min-height:0!important; }
+  .project-buttons .btn { flex:1 1 auto; }
+  .project-buttons .text-link { width:auto;flex-basis:100%; }
+}
+@media(max-width:420px) {
+  .project-preview:before { top:9px;left:9px;font-size:7px; }
+  .project-content { padding:19px 16px 17px!important; }
+  .project-buttons .btn { flex:1 1 100%; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .project-card,.project-preview img { transition:none!important; }
+  .project-card:hover,.project-card:hover .project-preview img { transform:none!important; }
+}
