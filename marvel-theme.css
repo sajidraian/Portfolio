@@ -394,3 +394,68 @@ html[data-theme="light"] .detail-preview-frame { background:#e5edf2!important; }
   }
   .project-preview img { transition:none!important; }
 }
+
+
+/* =========================================================
+   PROJECT CARDS — subtle 3D depth and cinematic light sweep
+   ========================================================= */
+@media (hover:hover) and (pointer:fine) and (min-width:761px) {
+  .projects-grid { perspective:1200px; }
+  .project-card {
+    position:relative;
+    transform-style:preserve-3d;
+    backface-visibility:hidden;
+    transition:
+      transform .38s cubic-bezier(.2,.7,.2,1),
+      border-color .38s ease,
+      box-shadow .38s ease!important;
+  }
+  .project-card:before {
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:2;
+    pointer-events:none;
+    opacity:0;
+    background:linear-gradient(
+      118deg,
+      transparent 18%,
+      rgba(91,220,244,.09) 42%,
+      rgba(255,255,255,.035) 50%,
+      transparent 72%
+    );
+    transform:translateX(-16%);
+    transition:opacity .35s ease,transform .65s ease;
+  }
+  .project-card:hover {
+    transform:translateY(-9px) rotateX(1.4deg) rotateY(-1deg)!important;
+    border-color:rgba(91,220,244,.55)!important;
+    box-shadow:
+      0 32px 72px rgba(0,0,0,.44),
+      0 0 0 1px rgba(91,220,244,.08),
+      0 0 34px rgba(91,220,244,.09)!important;
+  }
+  .project-card:hover:before {
+    opacity:1;
+    transform:translateX(16%);
+  }
+  .project-card:focus-within {
+    outline:2px solid var(--m-cyan);
+    outline-offset:4px;
+  }
+  .project-preview { transform:translateZ(10px); }
+  .project-content { transform:translateZ(3px); }
+}
+@media (hover:none), (max-width:760px) {
+  .project-card:before { display:none; }
+  .project-card:focus-within {
+    outline:2px solid var(--m-cyan);
+    outline-offset:3px;
+  }
+}
+@media (prefers-reduced-motion:reduce) {
+  .project-card,.project-card:before,.project-preview img {
+    transition:none!important;
+  }
+  .project-card:hover { transform:none!important; }
+}
